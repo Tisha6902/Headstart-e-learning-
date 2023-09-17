@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEADSTART AI Chatbot</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <center>
+
+  
+  <h1>HEADSTART AI Chatbot</h1>
+
+  <div id="chatbox">
+    <div id="chat-area"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <!-- Add an invisible audio element for text-to-speech -->
+  <audio id="textToSpeech" style="display: none;"></audio>
+
+  <script>
+    const chatArea = document.getElementById('chat-area');
+    const userInput = document.getElementById('user-input');
+
+    function displayMessage(sender, message) {
+      const messageDiv = document.createElement('div');
+      messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+      chatArea.appendChild(messageDiv);
+      chatArea.scrollTop = chatArea.scrollHeight; // Auto-scroll to bottom
+    }
+
+    function speakMessage(message) {
+      const textToSpeech = new SpeechSynthesisUtterance();
+      textToSpeech.text = message;
+      textToSpeech.lang = 'en-US';
+      speechSynthesis.speak(textToSpeech);
+    }
+
+    async function sendMessage() {
+      const userMessage = userInput.value.trim();
+      if (userMessage !== '') {
+        displayMessage('You', userMessage);
+
+        // Call the AI model to get a response
+        const response = await getAIResponse(userMessage);
+        displayMessage('HEADSTART', response);
+
+        // Speak the response using text-to-speech
+        speakMessage(response);
+
+        userInput.value = '';
+      }
+    }
+
+    async function getAIResponse(message) {
+      // Replace 'YOUR_API_KEY' with your actual OpenAI API key
+      const apiKey = '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';
+      const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      };
+
+      const requestBody = {
+        prompt: `You: ${message}\nHEADSTART:`,
+        max_tokens: 100,
+      };
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(requestBody),
+      });
+
+      const data = await response.json();
+      return data.choices[0].text.trim();
+    }
+  </script>
+  </center>
+</body>
+</html>

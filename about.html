@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <style>
+            *{
+              margin: 0;
+              padding: 0;
+            }
+            body{
+              background-color: black;
+            }
+          .navbar-nav {
+              margin-left: auto;
+              gap: 30px;
+              border: 1px #04d9ff;
+              padding: 10px;
+              box-shadow: 5px 10px 28px;
+          }
+          .navbar-nav a:hover{
+            background-color: #BC13FE;
+            transition-delay: 1.5s;
+            box-shadow: 0 0 10px #BC13FE,
+                  0 0 20px #BC13FE,
+                  0 0 40px #BC13FE,
+                  0 0 80px #BC13FE,
+                  0 0 10px #BC13FE;
+            color: black;
+          }
+          .card{
+              margin-top: 35px;
+             background: transparent;
+              color: white;
+              margin-left: 180px;
+              border-style: solid;
+              border-width: 2px 2px 2px 2px;
+              border-radius: 0.3rem;
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              box-shadow: 0px 0px 10px 10px #BC13FE;    
+          }
+         .text{
+          padding-top: 10%;
+          text-align: left;
+          height: 20px;
+          width: 500px;
+          color: white;
+          text-align: justify;
+          margin-bottom: auto;
+          margin-left: 70px;
+          font-size: 20px;
+        }
+        .im{
+          
+          width: 400px;
+          height: 650px;
+        }
+        .im2{
+          margin-left: 50px;
+          width: 300px;
+          height: 400px;
+        }
+        .im3{
+          
+          width: 400px;
+          height: 600px;
+        }
+        @keyframes animateBg {
+            100%{
+              filter: hue-rotate(360deg);
+            }
+          }
+
+    .main {
+      border: 5px solid white;
+      margin-bottom: 30px;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top: 70px;
+    background-color: #63c4da6c;
+    min-height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    animation: animateBg 3s linear infinite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu a {
+    text-decoration: none;
+    color: #000000;
+    opacity: 1;
+    z-index: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+
+
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+    transform: scale(1.1);
+}
+      </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                 <img src="image/logo.png" alt="logo" style="width:160px; margin-left: 70px;">
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+              </a>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <ul class="navbar-nav ml-auto text-center">
+         <li class="nav-item">
+           <a class="nav-link" href="header.php">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="sub2.html">Subject</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="about.html">About us</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="calci.html">Calculator</a>
+         </li>  
+       </ul>
+     </div>
+     </div>
+     </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="text" text-white>
+          <h1>About us</h1>
+          <p>
+            Welcome to our website. Our website is dedicated to providing student with the resource they need to succeed in their academic pursuit. we understand that studying can be challenging, and we aim to make the process as seamless as possible by offering a variety of tools and materials to support your learning.whether you're studying for exams, writing papers, or just looking for ways to improve your study habits, we've got you covered. Our website features a wealth of educational resources, including study guides, tutorial videos, practice quizzes and much more. Our goal is to help you achieve academic success and reach your full potential as a student. we believe that with the right tools and resources, you can oversome any challenges and excel in your studies. thank you for choosing our study website, and we look forward to supporting you on your academic journey. 
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <img src="image/mar16.jpg" class="im">
+      </div>
+    </div>
+  </div><br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <img src="image/msn.png" class="im2">
+      </div>
+      <div class="col">
+      <div class="text" text-white>
+        <h1>Our Mission</h1>
+        <p>
+          Our mission is simple yet powerful: to empower students by providing a centralized platform where they can access high-quality educational materials conveniently. We believe that access to knowledge should be easy and affordable, and we're committed to making this a reality.
+        </p>
+      </div>
+    </div>
+  </div>
+</div><br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <div class="text" text-white>
+      <h1>What We Believe In</h1>
+      <p>
+        Quality Education: We're passionate about learning and are committed to delivering the highest quality educational content. Our materials are carefully curated to ensure they meet the needs of 10th-grade students.
+      </p>
+      <p>
+        Accessibility: Education should be accessible to all. That's why we offer a wide range of resources at your fingertips, available whenever and wherever you need them.
+      </p>
+      <p>
+        Continuous Improvement: We're constantly evolving and expanding our offerings to meet the changing needs of students and educators. We welcome feedback and strive for excellence in everything we do.
+      </p>
+    </div>
+  </div>
+  <div class="col">
+    <img src="image/bel.png" class="im3">
+</div>
+</div>
+</div><br><br><br>
+
+  <div class="main">
+
+    <footer>
+      
+        <div class="zoom">
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+  
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+  
+                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+  
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+            </ul>
+  
+        </div>
+  
+        <ul class="menu">
+            <p>If any query required the click on <a href="contact.html">Contact us</a></p>
+        </ul>
+  
+        <p>Designed by Tisha Rathod</p>
+  
+  
+    </footer>
+  
+  
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

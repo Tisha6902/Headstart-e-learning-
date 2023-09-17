@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup</title>
+	<style>
+		html{
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			 background: #1a1e23;
+			font-family: arial,sens-serif;
+			background: linear-gradient(#141e30, #243b55);
+		}
+
+
+
+		.login-box{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			padding: 40px;
+			transform: translate(-50%,-50%);
+			background: rgba(0,0,0,0.9);
+			box-sizing: border-box;
+			box-shadow: 0 15px 25px rgba(0,0,0,10);
+			border-radius: 10px;
+		}
+		.avatar{
+			text-align: center;
+			margin: 0 0 20px;
+			width: 50px;
+			margin-left: 120px;
+			border-radius: 50%;
+		}
+		.login-box .user-box{
+			position: relative;	
+		}
+		.login-box .user-box input{
+			width: 100%;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #f1eee6;
+			margin-bottom: 30px;
+			border: none;
+			border-bottom: 1px solid #f1eee6;
+			outline: none;
+			background-color: transparent;
+		}
+		.login-box .user-box label{
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px 0;
+			color: #f1eee6;
+			pointer-events: none;
+			transition: .6s;
+		}
+		.login-box .user-box input:focus ~ label,
+		.login-box .user-box input:valid ~ label
+		{
+			top: -20px;
+			left: 0px;
+			color: #03e9f4;
+			font-size: 12px;
+		}
+		.login-box form a
+		{
+			position: relative;
+			display: inline-block;
+			padding: 10px 20px;
+			color: #03e9f4;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-decoration: none;
+			overflow: hidden;
+			margin-top: 40px;
+			letter-spacing: 4px; 
+		}
+		.login-box form a:hover{
+			background: #03e9f4;
+			color: #f1eee6;
+			border-radius: 5px;
+			box-shadow: 0 0 25px #03e9f4,
+			           0 0 50px #03e9f4,
+			           0 0 100px #03e9f4; 
+
+		}
+
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+	</style>
+</head>
+<body>
+	
+
+   <div class="login-box">
+   	   <center><img src="image/logo.png" width="220px" height="120px"></center>
+   	   <form action="" method="post">
+   	   	<div class="user-box">
+   	   		<input type="text" name="uname" required="">
+   	   		<label>Name</label>	
+   	   	</div>
+   	   	<div class="user-box">
+   	   		<input type="text" name="no" required="">
+   	   		<label>mobile-No.</label>	
+   	   	</div>
+   	   	<div class="user-box">
+   	   		<input type="text" name="email" required="">
+   	   		<label>Email-id</label>	
+   	   	</div>
+   	   	<div class="user-box">
+   	   		<input type="password" name="password" required="">
+   	   		<label>Password</label>	
+   	   	</div>
+   	   	<div class="user-box">
+   	   		<input type="password" name="cpassword" required="">
+   	   		<label>Re-enter Password</label>	
+   	   	</div>
+
+   	  <div class="wrap">
+      <button class="button">Sign up</button>
+      </div><br><br> 
+        	
+   	   </form>
+   	   <p style="color: white;"> You have already an account ?<a href="log.html" style="color: white; text-decoration: none; ">Sign in</a></p> 
+   </div>
+
+</body>
+</html>
